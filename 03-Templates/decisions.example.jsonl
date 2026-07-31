@@ -1,0 +1,4 @@
+{"ts":"2026-07-30T09:00:00+08:00","kind":"customer_signal","moment":"使用者明确表示系统字段不可信，实际以票据影像为准","why":"权威证据源与接口字段存在冲突，必须进入数据地图和验收","spec_ref":"requirements.md#数据地图"}
+{"ts":"2026-07-30T09:05:00+08:00","kind":"fde_call","moment":"将不可读影像统一转人工复核，不猜测违规","why":"错误自动通过的业务后果高于人工接管成本","spec_ref":"sow.md#人机边界"}
+{"ts":"2026-07-30T09:10:00+08:00","kind":"rejection","moment":"否决在未拿到真实样本前承诺 95% 准确率","why":"指标尚无 baseline，写入 SOW 会制造不可控验收责任","spec_ref":"sow.md#eval"}
+{"ts":"2026-07-30T09:15:00+08:00","kind":"asset","moment":"把重复出现的人工升级逻辑沉淀为 Eval 模板","why":"第二个项目不应重新设计相同责任边界","spec_ref":"retrospective.md#复用资产"}

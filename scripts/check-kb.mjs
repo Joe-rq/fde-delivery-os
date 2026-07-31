@@ -180,7 +180,7 @@ for (const file of markdownFiles) {
   const relativePath = toRepoPath(file);
   const isReference = relativePath.includes("/references/");
 
-  if (!isReference && !content.startsWith("---\n")) {
+  if (!isReference && !/^---\r?\n/.test(content)) {
     addError(`缺少 YAML frontmatter：${relativePath}`);
   }
 
@@ -219,7 +219,9 @@ for (const file of markdownFiles) {
     if (!pathPart) continue;
     stats.localLinks += 1;
     const resolvedTarget = resolve(dirname(file), pathPart);
-    if (!resolvedTarget.startsWith(`${root}/`) && resolvedTarget !== root) {
+    const rootNorm = root.split("\\").join("/");
+    const resolvedNorm = resolvedTarget.split("\\").join("/");
+    if (!resolvedNorm.startsWith(`${rootNorm}/`) && resolvedNorm !== rootNorm) {
       addError(`Markdown 链接越出仓库：${relativePath} → ${target}`);
     } else if (!existsSync(resolvedTarget)) {
       addError(`Markdown 本地链接不存在：${relativePath} → ${target}`);

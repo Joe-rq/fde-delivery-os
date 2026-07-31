@@ -68,7 +68,7 @@ Skills 目录、安装思路和安全边界见 [skills/README.md](skills/README.
 | [01-Methods](01-Methods/) | 机会筛选、Discovery、SOW、Eval、生产与复用 |
 | [02-Playbooks](02-Playbooks/) | 从线索到 SOW、进场诊断、原型到生产、项目复盘 |
 | [03-Templates](03-Templates/) | 7 个可复制模板/示例 |
-| [04-Cases](04-Cases/) | 合成沙盒案例、项目候选与外部模式索引 |
+| [04-Cases](04-Cases/) | 合成沙盒案例、项目候选、真实脱敏案例与外部模式索引 |
 | [05-Engineering](05-Engineering/) | Production Agent、Skill 与 Harness |
 | [06-Sources](06-Sources/) | 来源登记、事实状态、证据与许可边界 |
 | [07-Portfolio](07-Portfolio/) | 作品集导航、简历表述与发布验收记录 |
@@ -88,6 +88,7 @@ Skills 目录、安装思路和安全边界见 [skills/README.md](skills/README.
 
 - “启衡”只表示 **FDE 课程沙盒 PoC / 合成数据**，不是付费客户、生产交付或真实采用证据。
 - [HIS 问题诊断 Agent](04-Cases/HIS客户问题诊断Agent.md) 始终是 `project-candidate / discovery-needed`，没有客户授权、样本、上线或业务效果证据。
+- 真实脱敏案例（field-case / redacted）来自作者实际交付，已隐去客户、厂商与凭据；其证据为 private-evidence（测试库验证或方法论应用），不可由本仓库独立复算，也不代表生产采用。
 - 原始交付物、课程正文、客户数据、公司内部材料和本地路径不进入本仓库。
 - 数字必须同时说明样本、口径和证据强度；资产数量不得解释为用户采用或业务效果。
 - 许可范围见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE.md)；文档公开再利用许可仍有发布阻塞项。

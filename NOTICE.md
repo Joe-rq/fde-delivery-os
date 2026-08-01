@@ -2,7 +2,7 @@
 title: Notice与许可边界
 type: legal-notice
 status: public-review
-updated: 2026-07-31
+updated: 2026-08-01
 tags: [notice, license, attribution]
 ---
 
@@ -18,7 +18,7 @@ tags: [notice, license, attribution]
 
 由于课程内容的改编和再授权范围尚未得到书面确认：
 
-- `01-Methods/`、`02-Playbooks/`、`03-Templates/`、`04-Cases/`、`05-Engineering/`、`06-Sources/`、`07-Portfolio/` 以及顶层文档当前不提供自由再利用许可；
+- `01-Methods/`、`02-Playbooks/`、`03-Templates/`、`04-Cases/`、`05-Engineering/`、`06-Sources/`、`07-Portfolio/`、`08-Resources/` 以及顶层文档当前不提供自由再利用许可；
 - 在逐项权利核验完成前，不把“已重写”自动等同于“可自由授权”；
 - 如发现表达与受限材料过近，应在公开发布前继续重写、删除或取得许可。
 

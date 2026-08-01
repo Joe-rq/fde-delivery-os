@@ -69,6 +69,7 @@ const requiredDirectories = [
   "05-Engineering",
   "06-Sources",
   "07-Portfolio",
+  "08-Resources",
   "skills",
   "scripts",
 ];
@@ -80,6 +81,8 @@ const requiredFiles = [
   "04-Cases/启衡课程沙盒报销预审PoC.md",
   "04-Cases/HIS客户问题诊断Agent.md",
   "07-Portfolio/公开发布说明.md",
+  "08-Resources/README.md",
+  "08-Resources/FDE资源矩阵.md",
   ".github/workflows/validate.yml",
 ];
 

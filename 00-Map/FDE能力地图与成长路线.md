@@ -3,7 +3,7 @@ title: FDE能力地图与成长路线
 type: map
 status: active
 updated: 2026-07-31
-sources: [openai-careers, public-portfolio-evidence]
+sources: [openai-careers, public-portfolio-evidence, restricted-course-inspiration]
 tags: [capability, roadmap, portfolio]
 ---
 
@@ -21,6 +21,17 @@ tags: [capability, roadmap, portfolio]
 | 干系人协同 | 能对齐使用者、业务、IT、安全和决策人 |
 | 产品判断 | 能区分一次性需求与可复用模式 |
 | 端到端交付 | 能在不完整信息下推进到采用与复用 |
+
+## 能力 ↔ 现场难点映射
+
+八维能力对应现场四类落地难点——学某项能力是为了解某类问题：
+
+| 落地难点 | 对应能力维度 | 项目现场工具 |
+|---|---|---|
+| 业务 know-how | Discovery、产品判断 | 五张地图、需求说明清单 |
+| 数据 | 企业集成、AI 应用工程 | 数据地图、系统地图 |
+| 组织 | 干系人协同 | 组织地图、政治地图 |
+| 决策层认知 | 端到端交付、干系人协同 | SOW、采用指标 |
 
 ## 三阶段公开证据路线
 

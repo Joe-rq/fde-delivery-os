@@ -3,7 +3,7 @@ title: Skill与Harness
 type: engineering
 status: active
 updated: 2026-07-31
-sources: [public-portfolio-evidence, openfde-chatdemo]
+sources: [public-portfolio-evidence, openfde-chatdemo, restricted-course-inspiration]
 tags: [skill, harness, judgment-unit]
 ---
 
@@ -40,6 +40,20 @@ tags: [skill, harness, judgment-unit]
 - 至少 2 条场景测试；
 - 版本、作者、来源和许可。
 
+## Skill 上下文经济学
+
+结构对还不够，要控制 token 成本。三层渐进加载是核心设计原则：
+
+| 层 | 内容 | 加载时机 | 成本 |
+|---|---|---|---|
+| 元数据层 | name + description | 常驻启动 | ~百级 token |
+| 指令层 | SKILL.md 正文 | 触发时加载 | 控制在 5k token 内 |
+| 资源层 | references/、脚本、参考 | 按需读取 | 近乎无限 |
+
+- description 是 Skill 被发现和调用的唯一路由依据，必须穷举触发场景与动词——写不清等于不存在。
+- 主文件只放核心用法，重资源外移到 references/（本仓库 `fde-opportunity-diagnosis` 的 `references/scorecard.md` 即按需加载范例）。
+- 参考文件一层直达，禁止 A 引 B 引 C 的套娃（越靠后越易被截断）；超 100 行的参考开头放目录。
+
 ## 本仓库的 3 个公开 Skills
 
 | Skill | 状态 | 公开证据 |
@@ -49,6 +63,20 @@ tags: [skill, harness, judgment-unit]
 | `fde-knowledge-ingest` | draft / callable | `SKILL.md`、1 个来源策略、3 条 eval 场景 |
 
 这里的“可调用”指结构满足 Agent Skill 的触发、流程和输出要求；不表示已经产生用户采用、生产结果或跨模型稳定性。
+
+## 基于 Agent 轨迹的 Skill 迭代
+
+Skill 好坏不能拍脑袋，要看 Agent 真实使用轨迹。五个诊断信号：
+
+| 信号 | 含义 | 动作 |
+|---|---|---|
+| 出现意外路径 | Agent 走了没设计的路 | 补边界或加引导 |
+| 遗漏连接 | 该读的参考没读 | 调整 description 或引用 |
+| 反复读取 | 同一文件读多次 | 信息没组织好，重构 |
+| 从未访问 | 某参考没人用 | 评估是否多余 |
+| 元数据触发不准 | description 没引来对的场景 | 重写触发词 |
+
+基于观察迭代，而非凭空想象。
 
 ## 从 Skill 回到工程
 

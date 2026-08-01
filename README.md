@@ -2,7 +2,7 @@
 title: FDE Delivery OS
 type: index
 status: public-review
-updated: 2026-07-31
+updated: 2026-08-01
 tags: [fde, delivery, playbook, skills, evidence]
 ---
 
@@ -49,6 +49,7 @@ tags: [fde, delivery, playbook, skills, evidence]
 3. 要把资料或复盘沉淀进体系：用 [fde-knowledge-ingest](skills/fde-knowledge-ingest/SKILL.md) 做去重、来源分级和许可检查。
 4. 只需要文档：从 [Playbooks](02-Playbooks/) 选择执行流程，再复制 [Templates](03-Templates/)。
 5. 验证仓库完整性：运行 `node scripts/check-kb.mjs`；需要联网核验外链时运行 `node scripts/check-kb.mjs --external`。
+6. 不知道该读什么：从 [FDE 资源导航](08-Resources/README.md) 按当前项目阶段选资料，不从工具列表开始。
 
 ## 3 个可调用 Skills
 
@@ -69,9 +70,11 @@ Skills 目录、安装思路和安全边界见 [skills/README.md](skills/README.
 | [02-Playbooks](02-Playbooks/) | 从线索到 SOW、进场诊断、原型到生产、项目复盘 |
 | [03-Templates](03-Templates/) | 7 个可复制模板/示例 |
 | [04-Cases](04-Cases/) | 合成沙盒案例、项目候选、真实脱敏案例与外部模式索引 |
-| [05-Engineering](05-Engineering/) | Production Agent、Skill 与 Harness |
+| [05-Engineering](05-Engineering/) | Production Agent、Skill 与 Harness、CLI 工作流纪律 |
 | [06-Sources](06-Sources/) | 来源登记、事实状态、证据与许可边界 |
 | [07-Portfolio](07-Portfolio/) | 作品集导航、简历表述与发布验收记录 |
+| [08-Resources](08-Resources/) | 官方、开源、私有研究与课程启发的分层资源地图 |
+| [09-CourseNotes](09-CourseNotes/) | FDE 共学营的方法论骨架与项目 gap 映射 |
 | [scripts](scripts/) | 本地链接、敏感信息、事实口径和文件完整性校验 |
 
 ## 与工程案例的关系

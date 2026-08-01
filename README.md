@@ -83,7 +83,7 @@ Skills 目录、安装思路和安全边界见 [skills/README.md](skills/README.
 
 其他已核验的公开实践：
 
-- [iris-eval](https://github.com/Joe-rq/iris-eval)：评测工程实践；
+- [iris-eval](https://github.com/Joe-rq/iris-eval)：可离线复现的评测工程样本：同一批 GSM8K 生成，换答案抽取器差 34 分（strict 64% / flexible 98%），实证「评测分数 = 模型能力 × 评测方法」；
 - [travel-reimbursement-agent](https://github.com/Joe-rq/travel-reimbursement-agent)：可运行的报销辅助 Agent；
 - `my-content-workflow`：**TODO — 2026-07-31 公开链接返回 404，发布前确认仓库名或公开状态。**
 

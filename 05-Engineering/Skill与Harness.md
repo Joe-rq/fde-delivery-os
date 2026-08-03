@@ -29,6 +29,17 @@ tags: [skill, harness, judgment-unit]
 
 “在课程沙盒中出现”只能形成候选模式，不能写成跨客户验证。
 
+### 象限分类：什么时候做成 Skill
+
+用 modelScore（模型在该任务的能力）× practiceScore（实践沉淀厚度）双维判断。有实践沉淀才值得做成 Skill；modelScore 决定象限与策略：
+
+| 象限 | 特征 | 策略 | 实证（私有证据） |
+|---|---|---|---|
+| mastery | 模型能胜任，实践更强 | comparison：靠 with/without 对照证明增量 | 医院信息系统 SQL 查询（modelScore 75 / practiceScore 97），with 0.875 vs without 0.583，delta +0.293 |
+| codification | 模型在该任务弱，靠实践规范补足 | reference：把规范喂给模型 | 品牌 PPT 模板（modelScore 38 / practiceScore 86），靠精确匹配断言 |
+
+> 两条评测设计不同：mastery 用差异化断言（skill-differential），codification 用精确匹配断言。混淆会把"模型本就会"的任务做成过度约束，或把"模型不会"的任务做成无效对照。[Private-evidence · 核验于 2026-05~06 · 不可由本仓库独立复算]
+
 ## Skill 最小结构
 
 - 触发与不触发条件；
@@ -50,6 +61,8 @@ tags: [skill, harness, judgment-unit]
 
 这里的“可调用”指结构满足 Agent Skill 的触发、流程和输出要求；不表示已经产生用户采用、生产结果或跨模型稳定性。
 
+> 生产采用说明（私有证据）：上表 3 个公开 Skill 标 draft，仅证明结构满足。作者私有交付环境另有约 16 个同类 Skill 在真实医院信息系统交付中持续使用（非 draft），覆盖需求结构化 -> SQL/原型开发 -> 知识入库 -> 接口交接 -> 日报月报全链路。本仓库不公开其内容、院区名、表名与厂商名；它佐证 Skill 模式在真实交付中持续有效，而非停留在结构层。[Private-evidence]
+
 ## 从 Skill 回到工程
 
 Skill 不是隐藏业务逻辑的借口。高风险判断仍需：
@@ -59,5 +72,7 @@ Skill 不是隐藏业务逻辑的借口。高风险判断仍需：
 3. 为写操作设置权限、批准和审计；
 4. 将失败样本进入回归集；
 5. 在 Harness 层提供追踪、恢复和版本化。
+
+> 写操作权限实证（私有证据）：一个医院信息系统 SQL 查询 Skill 把"只读"固化为硬约束--绝对禁止生成 INSERT/UPDATE/DELETE/DROP 等修改语句，用户要求改数据时只给 SELECT 定位行 + 拒绝模板。评测 case-002 实证：with 拒绝 UPDATE 并给 SELECT 替代 = 1.0；without 直接生成 DML = 0.33。字段报错时禁止"再猜"--要求用户跑发现查询确认真实字段名，防 AI 幻觉字段名。这是"为写操作设置权限"与"失败样本进入回归集"的实证。[Private-evidence · 核验于 2026-05~06 · 不可由本仓库独立复算]
 
 具体文件见 [Skills 导航](../skills/README.md)。

@@ -91,7 +91,7 @@ tags: [course, fde, l2, scope, sow, cli-workflow]
   - 三工具分工：Claude Code（长上下文工作流）/ Codex CLI（CI 批量）/ Cursor（重度改码）
   - 通用起手式四步：上下文文件 → SOW 到 SPEC → 小步增量 → 每步自证
   - CLI 五类日常动作：读存量 / 接系统 / 动系统 / 无人值守 / 多模态摄取
-  - AGENTS.md 已成事实规范（6 万+ 项目，AAIF 治理）
+  - AGENTS.md 已成事实规范（课程引用的外部统计：6 万+ 项目、AAIF 治理；非课程原创数据）
   - 人机规模三档：盯屏 3-5 / 异步 10-60 / fan-out 数百
   - 4 倍产能但净增益仅 12%，瓶颈在 review 不在生成
   - 脚手架 > 模型；永不从聊天记录直接改代码

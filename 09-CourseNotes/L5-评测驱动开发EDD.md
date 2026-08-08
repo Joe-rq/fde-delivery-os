@@ -113,3 +113,7 @@ Agent 的评测不能停在交付末端的验收动作，而要升级为驱动�
 | 评测对象 = trace 与测试集 | [03-Templates/Eval计划模板.md](../03-Templates/Eval计划模板.md)、[skills/fde-eval-acceptance](../skills/fde-eval-acceptance/SKILL.md) | ⚠️缺口 |
 | 结果七类型与测试集治理 | [01-Methods/Eval与验收.md](../01-Methods/Eval与验收.md)（六动作已有，七类型缺） | 🔧补强 |
 | 安全与职业发展 | [05-Engineering/Production-Agent参考架构.md](../05-Engineering/Production-Agent参考架构.md)、[00-Map/个人FDE定位.md](../00-Map/个人FDE定位.md) | ✅已覆盖 / 🔧补强 |
+
+## 溯源补遗（2026-08-08 对照文字稿后补录）
+
+- **FDE 四价值**（文字稿「FDE 同时承担咨询与工程交付」节，原笔记漏录）：①咨询价值（识别高 ROI 场景、解释能力边界、定义阶段目标与风险）②交付价值（补齐客户缺的 Agent/全栈/集成/部署能力并对结果负责）③情绪价值（持续沟通、让进展可见、风险前置、用客户语言解释技术——不是一味友好，而是让客户始终知道发生什么、为什么、风险在哪、下一步看到什么）④长期价值（一次交付变信任、复购、行业 Know-how、可复用产品资产）。结果价值决定能否验收回款，沟通信任决定是否继续合作。
